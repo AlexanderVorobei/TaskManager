@@ -1,0 +1,19 @@
+<div class="col-md-12">
+  <h1>SIMPLE TODO LISTS</h1>
+  <h4>FROM RUBY GARAGE</h4>
+
+  <%= link_to "Add Task", new_task_path, class: 'btn btn-primary' %>
+
+<hr />
+
+  <% @tasks.each do |task| %>
+  <%= render partial: 'task', object: task %>
+  <% end %>
+
+<hr />
+
+  <% @completed_tasks.each do |task| %>
+  <%= render partial: 'task', object: task %>
+  <% end %>
+
+</div>
